@@ -1,12 +1,12 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
+[ + ] <div> and <span>
+[ + ] height: and width:
+[ + ] margin: and padding: 
+[ + ] Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Flexbox
+[ yes ] Feature 1 - Flexbox
 [ no ] Feature 2 - Flip Card
 [ no ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
@@ -18,15 +18,312 @@ Select ONE Additional Feature to Add
 <html>
 
 <head>
-  <title>Unit 5 Project</title>
+  <title>Unit 4 Project</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial scale=1.0">
+  <!-- ICONSCOUT CDN -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <title>Art Gallery</title>
+  
   <style>
+    * {
+      margin:20;
+      padding:0;
+      list-style:none;
+      box-sizing:border-box;
+    }
+    
+    :root {
+      color-body-bg: #d8dae2;
+      color-white: #fff;
+      color-light: #eff0f1;
+      color-dark: #12122e;
+      --transition: all 300ms ease;
+    }
+    h2 {
+      color:white
+     
+    }
+    
+    h4 {
+      background-color:white;
+      text-align: center;
+    }
+    
+    body{
+      background: url("https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(4).jpg?v=1731616238514");
+      display:grid;
+      place: center;
+      height:100vh;
+      width: 75vw;
+      margin: 0 auto;
+      font-family:"poppins", papyrus;
+      font-size: 1.5rem;
+      color:black;
+    }
+    
+    img {
+      display:block;
+      width: 100%;
+      object-fit: cover;
+      
+    }
+    
+    main{
+      background:
+      width:70%
+      padding: 3rem;
+      border-radius:1rem;
+    }
+    
+    .categories {
+      display:flex;
+      gap:0.7rem;
+      margin:2rem 1 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .category {
+      background:#F5F5FA;
+      padding:0.4rem 1rem;
+      border-radius:0.5rem;
+      font-size:1.2rem;
+      opacity: 0.75; 
+    }
+    
+    .gallery {
+      display:flex;
+      flex-wrap:nowrap;
+      flex-direction:column;
+      gap:1rem;
+      background:#D4D4D9;
+      padding:1rem;
+      border: 4px solid transparent;
+      border-radius:3%
+    }
+    
+    
+    .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+    
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    
+    .row {
+  display: flex;
+}
 
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+    ion-icon{
+      color:white;
+      font-size:35px;
+    }
+  
   </style>
 </head>
 <body>
+<main>
+  <h2>
+    Art Portfolio
+  </h2>
+  
+  <ul class="categories">
+    <li><a class="category" href="#?">Splash Art</a></li>
+    <li><a class="category" href="#!">Storyboards</a></li>
+    <li><a class="category" href="#&">Concept Work</a></li>
+    <li><a class="category" href="#$">Sketch Work</a></li>
+  </ul>
+  <a href="https://www.instagram.com/n0vi.1/?hl=en" target="_blank">
+  <ion-icon name="logo-instagram"></ion-icon>
+  </a>
+    <a href="https://x.com/novic_0/media" target="_blank">
+  <ion-icon name="logo-twitter"></ion-icon>
+  </a>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
- 
+  <section class="galleries">
+  <article class="gallery">
+  <h4 id="?">Splash Art</h4>
+  <div class="gallery_images">
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_4759.jpeg?v=1731443787571" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(2).jpg?v=1731616220702" alt="two" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/illust7.jpeg?v=1732047710243" alt="three" style="width:90%">
+  </div>
+</div>
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(1).jpg?v=1731616208976" alt="one" style="width:100%">
+  </div>
+      <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/FC7E6A57-DEF7-4921-BF8A-90EE7487757D.jpeg?v=1731616990254" alt="two" style="width:100%">
+  </div>
+      <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_9421.jpg?v=1732288252556" alt="one" style="width:91%">
+  </div>
+    </div>
+     <div class="row">
+       <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_7694.jpg?v=1732289004141" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/B487AD74-F129-4BCF-8D6A-7784A9332CC4.jpeg?v=1731443665072" alt="two" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(3).jpg?v=1731616229432" alt="one" style="width:81%">
+  </div>
+    </div>
+      <div class="row">
+        <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/darika_final1.jpeg?v=1731616991840" alt="two" style="width:60%">
+  </div>
+  
+
+    </div>
+    </div>
+  </article>
+  
+   <article class="gallery">
+  <h4 id="!">Storyboards</h4>
+  <div class="gallery_images">
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(6).jpg?v=1731616373308" alt="one" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_6706.jpeg?v=1731702571880" alt="one" style="width:95%">
+  </div>
+</div>
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/ranni.jpeg?v=1732048416814" alt="one" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(9).jpg?v=1731616394506" alt="one" style="width:100%">
+  </div>
+    <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/skjhsjz.jpeg?v=1732048419087" alt="one" style="width:78%">
+  </div>
+</div>
+    </div>
+  </article>
+  
+  <article class="gallery">
+  <h4 id="&">Concept Work</h4>
+  <div class="gallery_images">
+    <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/avla.ref.1.jpeg?v=1731617125338" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/exp2.jpeg?v=1732048411215" alt="two" style="width:87%">
+  </div>
+    </div>
+    <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/askjfdnvsdv.jpeg?v=1731702594072" alt="two" style="width:100%">
+  </div>
+        <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/djfjdjdj.jpeg?v=1732048413080" alt="one" style="width:100%">
+  </div>
+      <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/sdfkefh.jpeg?v=1732048414496" alt="one" style="width:100%">
+  </div>
+    </div>
+    <div class="row">
+        <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(8).jpg?v=1731616370389" alt="one" style="width:100%">
+  </div>
+    </div>
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(5).jpg?v=1731616321622" alt="two" style="width:97%">
+  </div>
+     <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/unnamed%20(11).jpg?v=1731616640525" alt="two" style="width:100%">
+  </div>
+    <div class="column">
+      <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_7676.jpeg?v=1732221532045" alt="two" style="width:100%">
+    </div>
+</div>
+      <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/reference.jpeg?v=1732048407298" alt="one" style="width:100%">
+  </div>
+       <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_0713.jpeg?v=1732048409898" alt="one" style="width:69%">
+  </div> 
+    </div>
+    
+     <article class="gallery">
+  <h4 id="$">Sketch Work</h4>
+  <div class="gallery_images">
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/dskfesdf.jpeg?v=1732289391037" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/dfjsdf.jpeg?v=1732289390020" alt="two" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/sktech.jpeg?v=1732289389135" alt="three" style="width:100%">
+  </div>
+</div>
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_7698%20(1).jpeg?v=1732290068187" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_7696.jpeg?v=1732289850697" alt="three" style="width:100%">
+  </div> 
+    <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_7697%20(1).jpeg?v=1732290067328" alt="two" style="width:95%">
+  </div>
+  </div>
+      <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/kdsnf.jpeg?v=1732290311522" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/presige.jpeg?v=1732290312374" alt="two" style="width:100%">
+  </div>
+    </div>
+  <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_6209.jpeg?v=1732290150172" alt="one" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_6210.jpeg?v=1732290148785" alt="two" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://cdn.glitch.global/05cc115a-fa2a-4a81-a077-3f625c31dea2/IMG_5840.jpeg?v=1732290149482" alt="three" style="width:90%">
+  </div> 
+    </div>
+    </div>
+  </article>
+    </div>
+  </article>
+    
+
+   
+   
+  </section>
+  </main>
 
 </body>
 </html>
